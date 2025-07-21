@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Scrollbar kustom untuk semua elemen dengan overflow (untuk WebKit: Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+    height: 8px; /* Tinggi scrollbar (untuk horizontal) */
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent; /* Latar belakang track transparan */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.4); /* Warna thumb semi-transparan */
+    border-radius: 10px; /* Membulatkan sudut thumb */
+    transition: background-color 0.3s ease-in-out; /* Transisi lembut saat hover */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(128, 128, 128, 0.6); /* Thumb lebih gelap saat hover */
+}
+
+/* Scrollbar untuk semua elemen di Firefox */
+* {
+    scrollbar-width: thin; /* Membuat scrollbar lebih ramping */
+    scrollbar-color: rgba(128, 128, 128, 0.4) transparent; /* Warna thumb dan track */
+}
